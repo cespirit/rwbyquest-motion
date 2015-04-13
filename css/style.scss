@@ -1,0 +1,63 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+
+body {
+	background: black;
+	color: white;	
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: calc(100vh - 100px);
+}
+				
+.content {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.command {
+	max-width: 500px;
+	min-height: 100px;
+	padding: 1em 2em;
+	outline: 2px solid gray;
+}
+
+.controls {		
+	background: blue;
+	margin: 1em auto 0 auto;
+	text-align: center; 
+	min-height: 50px;
+	
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	ul {
+		padding: 0;
+	
+		li {
+			display: inline-block;
+			margin-left: 15px;
+		}
+	}	
+
+	a {
+		color: white;
+	}
+}
+
+@media (max-width: 540px) {
+	img {
+		width: 100vmin;
+		height: 100vmin;
+	}
+}
