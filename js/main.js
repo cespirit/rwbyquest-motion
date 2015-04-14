@@ -1,17 +1,19 @@
 $(document).ready(function() {
-	var pageNum = 0;	
+	var pageNum = -1;	
 	var page;
 
 	hidePageElements();
-	$(".page .command").fadeIn();
 
 	$(".next").click(nextPage);	
 	$(".prev").click(prevPage);
+	$("#togglePlay").click(function(){
+		$(this).find("i").toggleClass("fa-play fa-pause");
+	});
 
 	function prevPage(event){
-		event.preventDefault();
+		/*event.preventDefault();*/
 		pageNum--;
-		page = pages[pageNum];
+		page = pages[pageNum];		
 
 		if(page) {
 			updatePage();
@@ -23,7 +25,12 @@ $(document).ready(function() {
 	}
 
 	function nextPage(event){
-		event.preventDefault();
+		/*event.preventDefault();*/
+		if(pageNum < 0) { 
+			$(".page .title-screen").hide(); 
+			$(".controls").show();
+		}
+
 		pageNum++;
 		page = pages[pageNum];
 
@@ -40,6 +47,8 @@ $(document).ready(function() {
 		// Hide all other page elements
 		$(".page img").hide();
 		$(".page .command").hide();
+		$(".page .instructions").hide();
+		$(".page .credits").hide();
 	};
 
 	function updatePage() {
@@ -48,14 +57,24 @@ $(document).ready(function() {
 				hidePageElements();
 				$(".page img").attr("src", pages[pageNum].src);
 				$(".page img").fadeIn();
-				console.log("page type: image");
+				console.log("page type: image", pageNum);
 				break;
 			case "command":
 				hidePageElements();
-				$(".page .command").html("<p>"+ pages[pageNum].command +"</p>");
+				$(".page .command").html(pages[pageNum].command);
 				$(".page .command").fadeIn();
-				console.log("page type: command");
+				console.log("page type: command", pageNum);
 				break;	
+			case "instructions":
+				hidePageElements();
+				$(".page .instructions").html(pages[pageNum].text);
+				$(".page .instructions").fadeIn();
+				console.log("page type: instructions", pageNum);
+				break;
+			case "credits":
+				hidePageElements();
+				$(".page .credits").fadeIn();
+				break;
 			default:
 				console.log("Something went wrong with page: " + pageNum);
 				// Add a contact info with this page number for fixing
@@ -68,7 +87,7 @@ $(document).ready(function() {
 var pages = [	
 	{
 		pageType: "command",
-		command: "EVERYONE: Put as much distance between you and the window. Maybe head for the hall if possible."
+		command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>"
 	},
 	{
 		pageType: "image",
@@ -88,11 +107,185 @@ var pages = [
 	},
 	{
 		pageType: "command",
-		command: "Everyone back away from the window. Test out the entity's abilities by throwing a pillow at them!"
+		command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>"
 	},	
 	{
 		pageType: "image",
 		src: "images/8.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/9.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/10.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/11.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/12.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/13.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/14.png"		
+	},
+	{
+		pageType: "command",
+		command: "<p><span class='keyword'>Weiss</span>: Check who that might be real quick! We may assume its Ren, but you can never be too safe.</p>"	
+	},	
+	{
+		pageType: "image",
+		src: "images/16.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/17.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/18.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/19.png"		
+	},
+	{
+		pageType: "command",
+		command: "<p><span class='keyword'>Everyone</span>: Quick inventory check.</p>"	
+	},	
+	{
+		pageType: "image",
+		src: "images/21.png"		
+	},
+	{
+		pageType: "instructions",
+		text: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remeber to specify who you are directing.</p>"			
+	},
+	{
+		pageType: "command",
+		command: "<p><span class='keyword'>Pyrrha</span> and <span class='keyword'>Velvet</span>: Pull a sick maneuver where Pyrrha tosses Velvet behind <span class='keyword'>Blitz Blockade</span> so Velvet can use <span class='keyword'>Red Death Killer Heels</span> to slice up Blitz Blockade's leg ligaments.</p>"			
+	},	
+	{
+		pageType: "image",
+		src: "images/24.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/25.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/26.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/27.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/28.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/29.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/30.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/31.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/32.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/33.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/34.png"		
+	},
+	{
+		pageType: "command",
+		command: "<p><span class='keyword'>Yang</span> and <span class='keyword'>Cardin</span>: When it's distracted, knock it on its back with <span class='keyword'>Mace</span> and <span class='keyword'>Ember Celica</span> so the blood jets are less of a threat and try to pin it down.</p>"		
+	},	
+	{
+		pageType: "image",
+		src: "images/36.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/37.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/38.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/39.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/40.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/41.png"		
+	},	
+	{
+		pageType: "image",
+		src: "images/42.png"		
+	},
+	{
+		pageType: "command",
+		command: "<p><span class='keyword'>Blake</span>: Try to restrain the entity's arms. Maybe with <span class='keyword'>Gambol Shroud</span>.</p>"	
+	},	
+	{
+		pageType: "image",
+		src: "images/44.png"		
+	},
+	{
+		pageType: "command",
+		command: "<p><span class='keyword'>Yang</span>: Slam that guy into the ground using <span class='keyword'>Ember Celiclaw</span>, making sure his blood spurters are facing the wall.</p>"	
+	},
+	{
+		pageType: "image",
+		src: "images/46.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/47.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/48.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/49.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/50.png"		
+	},
+	{
+		pageType: "image",
+		src: "images/51.png"		
+	},
+	{
+		pageType: "credits"
 	}
 ];
-

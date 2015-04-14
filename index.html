@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<a id="top"></a>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RWBYQuest Motion</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Fira+Mono:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/style.min.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -13,24 +16,32 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>	
+<body>		
 	<div class="flex-container">		
 		<div class="content">		
 			<div class="page next">
 				<img src="" alt="">
-				<div class="command" style="display:none;"><p>EVERYONE: Put as much distance between you and the window. Maybe head for the hall if possible.</p></div>
+				<div class="command"></div>
+				<div class="instructions"></div>
+				<div class="title-screen page">
+					<h1>RWBYQUEST</h1>
+					<h2>#0136 &amp; #0137</h2>
+					CLICK TO START
+				</div>
+				<div class="credits">Credits</div>
 			</div>			
 		</div>
 		<div class="controls">
 			<ul>
-				<li><a class="prev" href="#">Previous</a></li>
-				<li><a class="next" href="#">Next</a></li>
+				<li><a class="prev" href="#top"><i class="fa fa-lg fa-backward"></i></a></li>
+				<li><a id="togglePlay" class="prev" href="#top"><i class="fa fa-lg fa-play"></i></a></li>
+				<li><a class="next" href="#top"><i class="fa fa-lg fa-forward"></i></a></li>
 			</ul>
 		</div>
 		
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
