@@ -13,3 +13,4 @@ TO DO
 - Add page animations
 - Auto scroll down if image height > than window. 
 - Add functionality to play/pause button
+- Add credits page content
