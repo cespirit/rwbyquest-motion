@@ -4,8 +4,18 @@ $(document).ready(function() {
 
 	hidePageElements();
 
-	$(".next").click(nextPage);	
+	$(".next").click(nextPage);			
 	$(".prev").click(prevPage);
+
+	$("body").keyup(function(event){
+		if(event.which === 37) {
+			prevPage(event);
+		}
+		else if(event.which === 39) {
+			nextPage(event);	
+		}
+	});
+
 	$("#togglePlay").click(function(){
 		$(this).find("i").toggleClass("fa-play fa-pause");
 	});
@@ -85,6 +95,10 @@ $(document).ready(function() {
 });
 
 var pages = [	
+	{
+		pageType: "instructions",
+		text: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>"			
+	},
 	{
 		pageType: "command",
 		command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>"
@@ -171,8 +185,12 @@ var pages = [
 	},
 	{
 		pageType: "command",
-		command: "<p><span class='keyword'>Pyrrha</span> and <span class='keyword'>Velvet</span>: Pull a sick maneuver where Pyrrha tosses Velvet behind <span class='keyword'>Blitz Blockade</span> so Velvet can use <span class='keyword'>Red Death Killer Heels</span> to slice up Blitz Blockade's leg ligaments.</p>"			
+		command: "<p><span class='keyword'>Pyrrha</span> and <span class='keyword'>Velvet</span>: Pull a sick maneuver where <span class='keyword'>Pyrrha</span> tosses <span class='keyword'>Velvet</span> behind <span class='keyword'>Blitz Blockade</span> so <span class='keyword'>Velvet</span> can use...</p>"			
 	},	
+	{
+		pageType: "command",
+		command: "<p>...<span class='keyword'>Red Death Killer Heels</span> to slice up <span class='keyword'>Blitz Blockade</span>'s leg ligaments.</p>"
+	},
 	{
 		pageType: "image",
 		src: "images/24.png"		
@@ -219,8 +237,12 @@ var pages = [
 	},
 	{
 		pageType: "command",
-		command: "<p><span class='keyword'>Yang</span> and <span class='keyword'>Cardin</span>: When it's distracted, knock it on its back with <span class='keyword'>Mace</span> and <span class='keyword'>Ember Celica</span> so the blood jets are less of a threat and try to pin it down.</p>"		
+		command: "<p><span class='keyword'>Yang</span> and <span class='keyword'>Cardin</span>: When it's distracted, knock it on its back with <span class='keyword'>Mace</span> and <span class='keyword'>Ember Celica</span> so the...</p>"		
 	},	
+	{
+		pageType: "command",
+		command: "<p>...blood jets are less of a threat and try to pin it down.</p>"		
+	},
 	{
 		pageType: "image",
 		src: "images/36.png"		

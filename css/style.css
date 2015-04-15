@@ -212,37 +212,44 @@ body {
   font-weight: bold;
   border: 1px solid white;
   border-radius: 5px; }
-  .btn:hover {
-    background: #070797; }
+  .btn:hover, .btn:focus {
+    background: #0909af; }
 
 .btn-start {
   padding: 0.5em 2em; }
 
+.credits,
+.command,
+.instructions,
+.controls {
+  display: none; }
+
 .command,
 .instructions {
   max-width: 500px;
-  padding: 1em 2em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-size: 1.25em;
+  margin: 0 1em; }
 
 .title-screen,
-.instructions {
+.instructions h2 {
   text-align: center; }
-
-.credits,
-.command,
-.instructions {
-  display: none; }
 
 .title-screen h1 {
   font-size: 3em; }
 
+.instructions {
+  padding: 0.25em 1em; }
+  .instructions h2 {
+    color: #000;
+    background: #FFF;
+    padding: 0.075em 0 0.075em 0; }
+
 .command {
+  padding: 1em 2em;
   min-height: 100px;
-  /*outline: 2px solid white;*/
   border: 2px solid white;
   border-radius: 7px;
-  margin: 0 1em;
-  font-size: 1.25em;
   background: #050566;
   background-image: -webkit-linear-gradient(#070797, #050566);
   background-image: linear-gradient(#070797, #050566); }
@@ -251,13 +258,11 @@ body {
 
 .controls {
   background: #070797;
-  /*margin: 1em auto 0 auto;*/
   text-align: center;
   width: 100%;
   position: fixed;
   left: 0;
-  bottom: 0;
-  display: none; }
+  bottom: 0; }
   .controls ul {
     padding: 0.5em 0;
     margin: 0; }
@@ -272,9 +277,8 @@ body {
     padding: 0.5em 1.5em;
     border: 1px solid #06067e;
     background: #0909af; }
-    .controls a:hover {
-      background: black;
-      border-color: white; }
+    .controls a:hover, .controls a:focus {
+      background: black; }
 
 @media (max-width: 540px) {
   img {
