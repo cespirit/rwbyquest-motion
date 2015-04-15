@@ -186,6 +186,10 @@ body {
   /* font-family: monospace, sans-serif; */
   font-family: 'Fira Mono', sans-serif; }
 
+a {
+  color: #1ba4ff;
+  word-break: break-all; }
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -194,7 +198,7 @@ body {
   align-content: center;
   align-items: center;
   min-width: 100vw;
-  height: calc(100vh - 50px); }
+  min-height: calc(100vh - 50px); }
 
 .content {
   flex-grow: 0;
@@ -225,13 +229,15 @@ body {
   display: none; }
 
 .command,
-.instructions {
+.instructions,
+.credits {
   max-width: 500px;
   line-height: 1.5em;
   font-size: 1.25em;
   margin: 0 1em; }
 
 .title-screen,
+.credits h2,
 .instructions h2 {
   text-align: center; }
 
@@ -256,8 +262,11 @@ body {
   .command p {
     margin: 0.5em 0; }
 
+.credits {
+  overflow: auto; }
+
 .controls {
-  background: #070797;
+  background: #06067e;
   text-align: center;
   width: 100%;
   position: fixed;
@@ -275,7 +284,7 @@ body {
     color: white;
     display: block;
     padding: 0.5em 1.5em;
-    border: 1px solid #06067e;
+    border: 1px solid #050566;
     background: #0909af; }
     .controls a:hover, .controls a:focus {
       background: black; }
@@ -285,7 +294,14 @@ body {
     width: 100vmin;
     height: 100vmin; }
 
+  .command,
+  .instructions {
+    font-size: 1.075em; }
+
   .command {
-    font-size: 1em; } }
+    padding: 1em 1em; }
+
+  .credits {
+    font-size: 1.1em; } }
 
 /*# sourceMappingURL=style.css.map */

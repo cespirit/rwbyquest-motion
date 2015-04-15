@@ -36,12 +36,12 @@ $(document).ready(function() {
 
 	function nextPage(event){
 		/*event.preventDefault();*/
-		if(pageNum < 0) { 
+		pageNum++;
+		if(pageNum >= 0) { 
 			$(".page .title-screen").hide(); 
 			$(".controls").show();
 		}
-
-		pageNum++;
+		
 		page = pages[pageNum];
 
 		if(page) {
@@ -181,7 +181,7 @@ var pages = [
 	},
 	{
 		pageType: "instructions",
-		text: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remeber to specify who you are directing.</p>"			
+		text: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>"			
 	},
 	{
 		pageType: "command",
@@ -306,6 +306,10 @@ var pages = [
 	{
 		pageType: "image",
 		src: "images/51.png"		
+	},
+	{
+		pageType: "instructions",
+		text: "<p><span class='keyword'>To be continued...</span></p>"			
 	},
 	{
 		pageType: "credits"

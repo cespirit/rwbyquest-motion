@@ -10,6 +10,11 @@ body {
 	font-family: 'Fira Mono', sans-serif;
 }
 
+a {
+	color: #1ba4ff;
+	word-break: break-all;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -18,7 +23,7 @@ body {
     align-content: center;
     align-items: center;
     min-width: 100vw;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
 }
 				
 .content {
@@ -57,7 +62,8 @@ body {
 }
 
 .command, 
-.instructions {
+.instructions,
+.credits {
 	max-width: 500px;	
 	line-height: 1.5em;
 	font-size: 1.25em;	
@@ -65,14 +71,13 @@ body {
 }
 
 .title-screen,
+.credits h2,
 .instructions h2 {
 	text-align: center;
 }
 
-.title-screen {
-	h1 {
-		font-size: 3em;
-	}
+.title-screen h1 {
+	font-size: 3em;
 }
 
 .instructions {	
@@ -100,8 +105,12 @@ body {
 
 }
 
+.credits {
+	overflow: auto;
+}
+
 .controls {		
-	background: lighten($controls-color, 10%);
+	background: lighten($controls-color, 5%);
 	text-align: center; 	
 	width: 100%;
 	position: fixed;
@@ -124,7 +133,7 @@ body {
 		color: white;
 		display: block;
 		padding: 0.5em 1.5em; 
-		border: 1px solid lighten($controls-color, 5%);
+		border: 1px solid $controls-color;
   		background: lighten($controls-color, 15%);
 
   		&:hover, &:focus {
@@ -139,7 +148,16 @@ body {
 		height: 100vmin;
 	}
 
+	.command, 
+	.instructions {
+		font-size: 1.075em;
+	}
+
 	.command {
-		font-size: 1em;
+		padding: 1em 1em;
+	}
+
+	.credits {
+		font-size: 1.1em;
 	}
 }
