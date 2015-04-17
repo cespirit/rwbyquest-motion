@@ -222,12 +222,6 @@ a {
 .btn-start {
   padding: 0.5em 2em; }
 
-.credits,
-.command,
-.instructions,
-.controls {
-  display: none; }
-
 .command,
 .instructions,
 .credits {
@@ -263,6 +257,7 @@ a {
     margin: 0.5em 0; }
 
 .credits {
+  display: none;
   overflow: auto; }
 
 .controls {
@@ -275,11 +270,8 @@ a {
   .controls ul {
     padding: 0.5em 0;
     margin: 0; }
-    .controls ul li {
-      display: inline-block;
-      /*margin-left: 15px;
-      margin-right: 15px;
-      */ }
+  .controls li {
+    display: inline-block; }
   .controls a {
     color: white;
     display: block;
@@ -290,7 +282,7 @@ a {
       background: black; }
 
 @media (max-width: 540px) {
-  img {
+  .panel-img {
     width: 100vmin;
     height: 100vmin; }
 

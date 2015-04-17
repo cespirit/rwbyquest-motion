@@ -2,8 +2,27 @@ $(document).ready(function() {
 	var autoPlayOn = true;
 	var pageNum = -1;	
 	var page;	
+	var pageElem;
 
-	var togglePlay = function() {
+	hidePageElements();
+
+	$(".next").on("click", function(){
+		nextPage();
+	});			
+	$(".prev").click(prevPage);
+
+	$("body").keyup(function(event){
+		if(event.which === 37) {
+			prevPage(event);
+		}
+		else if(event.which === 39) {
+			nextPage(event);	
+		}
+	});
+
+	$("#togglePlay").click(togglePlay);
+
+	function togglePlay() {
 		var togglePlayBtn = $(this).find("i");
 		var pressedPlay;
 		togglePlayBtn.toggleClass("fa-play fa-pause");
@@ -11,48 +30,94 @@ $(document).ready(function() {
 
 		if(pressedPlay) {
 			autoPlayOn = true;	
-			console.log("Pressed to PLAY");				
+			console.log("Pressed to play.", "autoPlayOn: ", autoPlayOn);
+			pageNum--;
+			nextPage();					
 		}
 		else {
 			autoPlayOn = false;
-			console.log("Pressed to PAUSE");
+			console.log("Pressed to pause", "autoPlayOn: ", autoPlayOn);
 		}
 	}
 
-	$(".btn-start").click(function(){
-		console.log("Clicked START");
-	});
+	function prevPage(){
+		pageNum--;
+		page = pages[pageNum];		
+		(page) ? updatePage() : pageNum++;
+	}
 
-	$(".prev").on("click", function(){
-		console.log("Clicked PREV");
-	});			
-
-	$(".next").on("click", function(){
-		console.log("Clicked NEXT"); 
-	}); 	
-
-	$("#togglePlay").click(togglePlay);			
-	
-	$("body").keyup(function(event){
-		if(event.which === 37) {
-			console.log("Clicked PREV");
+	function nextPage(){
+		pageNum++;
+		page = pages[pageNum];
+		if(pageNum == 0) { 
+			$(".page .title-screen").hide(); 
+			$(".controls").show();
 		}
-		else if(event.which === 39) {
-			console.log("Clicked NEXT");
+		else if(pageNum === pages.length - 1) {			
+			togglePlay();
 		}
-	});	
+		(page) ? updatePage() : pageNum--;
+	}	
+
+	function hidePageElements() {
+		// Hide all other page elements
+		$(".page img").hide();
+		$(".page .command").hide();
+		$(".page .instructions").hide();
+		$(".page .credits").hide();
+	}
+
+	function updatePage() {
+		switch(page.pageType) {
+			case "image":
+				pageElem = $(".page img");
+				hidePageElements();
+				pageElem.attr("src", pages[pageNum].src);
+				pageElem.fadeIn(3000, autoPlayCheck);
+				console.log("page type: image", pageNum);
+				break;
+			case "command":
+				pageElem = $(".page .command");
+				hidePageElements();
+				pageElem.html(pages[pageNum].command);
+				pageElem.fadeIn(3000, autoPlayCheck);
+				console.log("page type: command", pageNum);
+				break;	
+			case "instructions":
+				pageElem = $(".page .instructions");
+				hidePageElements();
+				pageElem.html(pages[pageNum].text);
+				pageElem.fadeIn(3000, autoPlayCheck);
+				console.log("page type: instructions", pageNum);
+				break;
+			case "credits":
+				pageElem = $(".page .credits");
+				hidePageElements();
+				pageElem.fadeIn(3000, autoPlayCheck);
+				break;
+			default:
+				console.log("Something went wrong with page: " + pageNum);
+				break;
+		}		
+	}
+
+	function autoPlayCheck() {
+		if(autoPlayOn && pageNum < pages.length - 1) {
+			nextPage();
+		}		
+	}
 
 });
 
 var pages = [	
-	{
+	/*{
 		pageType: "instructions",
 		text: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>"			
 	},
 	{
 		pageType: "command",
 		command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>"
-	},
+	},*/
 	{
 		pageType: "image",
 		src: "images/3.png"		
@@ -60,7 +125,7 @@ var pages = [
 	{
 		pageType: "image",
 		src: "images/4.png"		
-	}/*,
+	},
 	{
 		pageType: "image",
 		src: "images/5.png"		
@@ -68,7 +133,7 @@ var pages = [
 	{
 		pageType: "image",
 		src: "images/6.png"		
-	},
+	}/*,
 	{
 		pageType: "command",
 		command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>"
@@ -260,8 +325,8 @@ var pages = [
 	{
 		pageType: "instructions",
 		text: "<p><span class='keyword'>To be continued...</span></p>"			
-	}*/,
+	},
 	{
 		pageType: "credits"
-	}
+	}*/
 ];
