@@ -38,20 +38,26 @@ a {
 }
 
 .btn {
-	color: white;
-	background: #000000;
+	color: white;	
 	text-transform: uppercase;
 	font-weight: bold;
-	border: 1px solid white;
+	border: 1px solid lighten($controls-color, 15%);
+	background: lighten($controls-color, 15%);
 	border-radius: 5px;	
 
-	&:hover, &:focus {
-		background: lighten($controls-color, 15%);;
+	&:hover, &:focus, &:active {
+		background: #000000;
+		border: 1px solid white;
 	}
 }
 
 .btn-start {
 	padding: 0.5em 2em;
+}
+
+.controls, 
+.credits {
+	display: none;
 }
 
 .command, 
@@ -98,8 +104,7 @@ a {
 
 }
 
-.credits {
-	display: none;
+.credits {	
 	overflow: auto;
 }
 

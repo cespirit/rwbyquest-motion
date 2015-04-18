@@ -1,7 +1,65 @@
 $(document).ready(function() {
-	var autoPlayOn = true;
+	var started = false;
+	var autoPlayOn = false;
 	var pageNum = -1;	
-	var page;	
+	var page;
+	var pageType;	
+	var pageElem = $("#page");
+	var lastPage = pages.length - 1;
+
+	var updatePage = function() {
+		
+		$("#page").css("display", "block");  // TODO only when press start
+		
+		page = pages[pageNum];
+
+		if(page) {
+			pageType = page.pageType;
+			if(pageType) {
+				switch(pageType) {
+					case "instructions":
+						console.log("Instructions page");
+						$("#page").html("<div class='instructions'>" + page.instructions + "</div>");
+						break;
+					case "command":
+						console.log("Command page");
+						$("#page").html("<div class='command'>" + page.command + "</div>");
+						break;
+					case "image":
+						console.log("Image page");						
+						$("#page").html("<img class='panel-img' alt='' src='"+ page.src +"'/>");
+						break;
+					case "credits":
+						console.log("Credits page");
+						$("#page").html("");
+						$("#togglePlay").find("i").removeClass("fa-pause");
+						$("#togglePlay").find("i").addClass("fa-play");
+						$("#credits").css("display", "block");
+						break;
+					default:
+						console.log("Error in updatePage(). Page type is not valid for page: " + pageNum);
+						break;
+				}
+			}
+		} else {
+			console.log("Error in updatePage() at page number: " + pageNum);
+		}
+	};
+
+	var prevPage = function() {
+		console.log("Clicked PREV");
+		if(pageNum === lastPage) { 
+			$("#credits").css("display", "none");
+		}
+		pageNum--;
+		(pageNum < 0) ? ++pageNum : updatePage();		
+	};
+
+	var nextPage = function() {
+		console.log("Clicked NEXT"); 
+		pageNum++;
+		(pageNum > lastPage) ? --pageNum : updatePage();	
+	};
 
 	var togglePlay = function() {
 		var togglePlayBtn = $(this).find("i");
@@ -19,26 +77,32 @@ $(document).ready(function() {
 		}
 	}
 
-	$(".btn-start").click(function(){
-		console.log("Clicked START");
+	$("#btnStart").click(function(){
+		console.log("Clicked START");		
+		$("#titleScreen").css("display", "none");
+		$("#controls").css("display", "block");
+		started = true;
+		nextPage();
 	});
 
-	$(".prev").on("click", function(){
-		console.log("Clicked PREV");
+	$("#togglePlay").click(togglePlay);	
+
+	$("#prev").on("click", function(){
+		prevPage();
 	});			
 
-	$(".next").on("click", function(){
-		console.log("Clicked NEXT"); 
-	}); 	
-
-	$("#togglePlay").click(togglePlay);			
+	$("#next").on("click", function(){
+		nextPage();
+	}); 				
 	
 	$("body").keyup(function(event){
-		if(event.which === 37) {
-			console.log("Clicked PREV");
-		}
-		else if(event.which === 39) {
-			console.log("Clicked NEXT");
+		if(started) {
+			if(event.which === 37) {
+				prevPage();
+			}
+			else if(event.which === 39) {
+				nextPage();
+			}
 		}
 	});	
 
@@ -47,7 +111,7 @@ $(document).ready(function() {
 var pages = [	
 	{
 		pageType: "instructions",
-		text: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>"			
+		instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>"			
 	},
 	{
 		pageType: "command",
@@ -131,7 +195,7 @@ var pages = [
 	},
 	{
 		pageType: "instructions",
-		text: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>"			
+		instructions: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>"			
 	},
 	{
 		pageType: "command",
@@ -259,7 +323,7 @@ var pages = [
 	},
 	{
 		pageType: "instructions",
-		text: "<p><span class='keyword'>To be continued...</span></p>"			
+		instructions: "<p><span class='keyword'>To be continued...</span></p>"			
 	}*/,
 	{
 		pageType: "credits"

@@ -211,16 +211,21 @@ a {
 
 .btn {
   color: white;
-  background: #000000;
   text-transform: uppercase;
   font-weight: bold;
-  border: 1px solid white;
+  border: 1px solid #0909af;
+  background: #0909af;
   border-radius: 5px; }
-  .btn:hover, .btn:focus {
-    background: #0909af; }
+  .btn:hover, .btn:focus, .btn:active {
+    background: #000000;
+    border: 1px solid white; }
 
 .btn-start {
   padding: 0.5em 2em; }
+
+.controls,
+.credits {
+  display: none; }
 
 .command,
 .instructions,
@@ -257,7 +262,6 @@ a {
     margin: 0.5em 0; }
 
 .credits {
-  display: none;
   overflow: auto; }
 
 .controls {
