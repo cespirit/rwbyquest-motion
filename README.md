@@ -9,5 +9,6 @@ Roosterteeth Site:
 http://roosterteeth.com/home.php
 
 TO DO
-- Redo change page logic
-- Fix play and pause
+- Refactor code for updatePage() and the next and prev events
+- Different animations
+- Swap .js files in index for the app.min.js file

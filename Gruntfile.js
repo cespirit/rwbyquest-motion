@@ -11,9 +11,11 @@ module.exports = function(grunt) {
 			},
 			build: {
 				src: [
+					'js/animations.js',
+					'js/content.js',
 					'js/main.js'
 				],
-				dest: 'js/main.min.js'
+				dest: 'js/app.min.js'
 			}
 		},
 
@@ -45,11 +47,7 @@ module.exports = function(grunt) {
 				// If anything in these files changes, run the tasks
 				files: ['css/*.scss'],
 				tasks: ['sass', 'cssmin']
-			},
-			uglify: {
-				files: ['js/*main.js'],
-				tasks: ['uglify']
-			},
+			}
 		},
 
 	});
