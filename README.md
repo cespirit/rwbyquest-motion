@@ -9,6 +9,7 @@ Roosterteeth Site:
 http://roosterteeth.com/home.php
 
 TO DO
-- Refactor code for updatePage() and the next and prev events
 - Different animations
+- Default options for animations
+- Animation check, if none, default animation.
 - Swap .js files in index for the app.min.js file

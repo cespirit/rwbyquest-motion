@@ -1,11 +1,26 @@
 $(document).ready(function() {
-	var started = false;
 	var autoPlayOn = true;
 	var pageNum = -1;	
 	var page;
 	var pageType;	
 	var pageElem = $("#page");
-	var lastPage = content.pages.length - 1;	
+	var lastPage = content.pages.length - 1;
+	var clickedControls = false;	
+
+	var runAnimation = function(animation){
+		$.when(animation(pageElem))
+		.then(function(){
+			if(autoPlayOn) { 
+				console.log("runAnimation - autoPlayOn for nextPage()");
+				nextPage(); 							
+			}
+		})
+		.fail(function(){
+			alert("An ERROR occurred. runAnimation() Failed");
+			pageElem.clearQueue();
+			pageElem.stop(true, true);
+		});
+	};
 
 	var updatePage = function() {		
 		page = content.pages[pageNum];
@@ -17,45 +32,18 @@ $(document).ready(function() {
 				switch(pageType) { 
 					case "instructions":
 						console.log("Instructions page, pageNum: " + pageNum);
-						pageElem.html("<div class='instructions'>" + page.instructions + "</div>");
-						pageElem.data("pageNum", pageNum);
-						$.when(page.animation(pageElem)).then(function(){
-							if(autoPlayOn) { 
-								nextPage(); 							
-							}
-							else {
-								pageElem.stop(true, false);
-								pageElem.show();
-							}
-						});
+						pageElem.html("<div class='instructions pageContent' data-pagenum='"+ pageNum +"'>" + page.instructions + "</div>");
+						runAnimation(page.animation);
 						break;
 					case "command":
 						console.log("Command page, pageNum: " + pageNum);
-						pageElem.html("<div class='command'>" + page.command + "</div>");
-						pageElem.data("pageNum", pageNum);
-						$.when(page.animation(pageElem)).then(function(){
-							if(autoPlayOn) { 
-								nextPage(); 							
-							}
-							else {
-								pageElem.stop(true, false);
-								pageElem.show();
-							}
-						}); 
+						pageElem.html("<div class='command pageContent' data-pagenum='"+ pageNum +"'>" + page.command + "</div>");
+						runAnimation(page.animation);
 						break;
 					case "image":
 						console.log("Image page, pageNum: " + pageNum);						
-						pageElem.html("<div><img class='panel-img' alt='' src='"+ page.src + "'/></div>");
-						pageElem.data("pageNum", pageNum);
-						$.when(page.animation(pageElem)).then(function(){
-							if(autoPlayOn) { 
-								nextPage(); 						
-							}
-							else {
-								pageElem.stop(true, false);
-								pageElem.show();
-							}
-						});
+						pageElem.html("<div class='pageContent' data-pagenum='" + pageNum + "'><img class='panel-img' alt='' src='"+ page.src + "'/></div>");
+						runAnimation(page.animation);
 						break; 
 					case "credits":
 						console.log("Credits page, pageNum: " + pageNum);
@@ -75,18 +63,8 @@ $(document).ready(function() {
 		}
 	};
 
-	var prevPage = function() {
-		console.log("Clicked PREV");
-
-		if(pageNum === lastPage) { 
-			$("#credits").css("display", "none");
-		}
-		pageNum--;
-		(pageNum < 0) ? ++pageNum : updatePage();		
-	};
-
 	var nextPage = function() {
-		console.log("Clicked NEXT"); 
+		console.log("----- NEXT -----"); 
 		pageNum++;
 		if(pageNum > lastPage) {
 			--pageNum;	
@@ -94,88 +72,11 @@ $(document).ready(function() {
 			updatePage();
 		}
 	};
-
-	var togglePlay = function() {
-		var togglePlayBtn = $(this).find("i");
-		var isPaused = togglePlayBtn.hasClass("fa-play");
-
-		if(isPaused && pageNum != lastPage) {
-			autoPlayOn = true;	
-			togglePlayBtn.removeClass("fa-play");
-			togglePlayBtn.addClass("fa-pause");			
-			nextPage();
-			console.log("Pressed to PLAY, pageNum: ", pageNum);	
-		} 
-		else if(!isPaused){
-			autoPlayOn = false;	
-			togglePlayBtn.removeClass("fa-pause");
-			togglePlayBtn.addClass("fa-play");	
-			//updatePage();				
-			console.log("Pressed to PAUSE, pageNum: ", pageNum);			
-		}			
-	}
-
+	
 	$("#btnStart").click(function(){
 		console.log("Clicked START");		
 		$("#titleScreen").css("display", "none");
-		$("#controls").css("display", "block");
 		pageElem.css("display", "block");  
-		started = true;
 		nextPage();
 	});
-
-	$("#togglePlay").click(togglePlay);	
-
-	$("#prev").on("click", function(){
-		
-		autoPlayOn = false;	
-		var togglePlayBtn = $("#togglePlay").find("i");
-		togglePlayBtn.removeClass("fa-pause");
-		togglePlayBtn.addClass("fa-play");	
-
-		prevPage();
-	});			
-
-	$("#next").on("click", function(){
-				
-		autoPlayOn = false;	
-		var togglePlayBtn = $("#togglePlay").find("i");
-		togglePlayBtn.removeClass("fa-pause");
-		togglePlayBtn.addClass("fa-play");	
-
-		nextPage();
-	}); 
-
-	$("#page").on("click", function(){
-				
-		autoPlayOn = false;	
-		var togglePlayBtn = $("#togglePlay").find("i");
-		togglePlayBtn.removeClass("fa-pause");
-		togglePlayBtn.addClass("fa-play");	
-
-		nextPage();
-	});				
-	
-	$("body").keyup(function(event){
-		if(started) {
-			if(event.which === 37) {
-						
-				autoPlayOn = false;	
-				var togglePlayBtn = $("#togglePlay").find("i");
-				togglePlayBtn.removeClass("fa-pause");
-				togglePlayBtn.addClass("fa-play");	
-
-				prevPage();
-			}
-			else if(event.which === 39) {
-						
-				autoPlayOn = false;	
-				var togglePlayBtn = $("#togglePlay").find("i");
-				togglePlayBtn.removeClass("fa-pause");
-				togglePlayBtn.addClass("fa-play");	
-
-				nextPage();
-			}
-		}
-	});	
 });

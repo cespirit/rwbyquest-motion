@@ -182,7 +182,6 @@ th {
 body {
   background: black;
   color: white;
-  margin-bottom: 50px;
   /* font-family: monospace, sans-serif; */
   font-family: 'Fira Mono', sans-serif; }
 
@@ -223,10 +222,6 @@ a {
 .btn-start {
   padding: 0.5em 2em; }
 
-.controls,
-.credits {
-  display: none; }
-
 .command,
 .instructions,
 .credits {
@@ -262,28 +257,8 @@ a {
     margin: 0.5em 0; }
 
 .credits {
+  display: none;
   overflow: auto; }
-
-.controls {
-  background: #06067e;
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0; }
-  .controls ul {
-    padding: 0.5em 0;
-    margin: 0; }
-  .controls li {
-    display: inline-block; }
-  .controls a {
-    color: white;
-    display: block;
-    padding: 0.5em 1.5em;
-    border: 1px solid #050566;
-    background: #0909af; }
-    .controls a:hover, .controls a:focus {
-      background: black; }
 
 @media (max-width: 540px) {
   .panel-img {

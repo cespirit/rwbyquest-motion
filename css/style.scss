@@ -5,7 +5,6 @@
 body {
 	background: black;
 	color: white;	
-	margin-bottom: 50px;
 	/* font-family: monospace, sans-serif; */
 	font-family: 'Fira Mono', sans-serif;
 }
@@ -25,7 +24,7 @@ a {
     min-width: 100vw;
     min-height: calc(100vh - 50px);
 }
-				
+				 
 .content {
     flex-grow: 0;
     flex-shrink: 1;
@@ -53,11 +52,6 @@ a {
 
 .btn-start {
 	padding: 0.5em 2em;
-}
-
-.controls, 
-.credits {
-	display: none;
 }
 
 .command, 
@@ -104,38 +98,9 @@ a {
 
 }
 
-.credits {	
+.credits {
+	display: none; 	
 	overflow: auto;
-}
-
-.controls {		
-	background: lighten($controls-color, 5%);
-	text-align: center; 	
-	width: 100%;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-
-	ul {
-		padding: 0.5em 0;
-		margin: 0;		
-	}	
-
-	li {
-		display: inline-block;
-	}
-
-	a {
-		color: white;
-		display: block;
-		padding: 0.5em 1.5em; 
-		border: 1px solid $controls-color;
-  		background: lighten($controls-color, 15%);
-
-  		&:hover, &:focus {
-  			background: black;
-  		}
-	}
 }
 
 @media (max-width: 540px) {

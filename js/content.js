@@ -19,207 +19,257 @@ var content = {
 			pageType: "image",
 			src: "images/4.png",
 			animation: animations.fadeIn		
-		}/*,
+		},
 		{
 			pageType: "image",
-			src: "images/5.png"		
+			src: "images/5.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/6.png"		
+			src: "images/6.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "command",
-			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>"
+			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>",
+			animation: animations.fadeIn
 		},	
 		{
 			pageType: "image",
-			src: "images/8.png"		
+			src: "images/8.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/9.png"		
+			src: "images/9.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/10.png"		
+			src: "images/10.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/11.png"		
+			src: "images/11.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/12.png"		
+			src: "images/12.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/13.png"		
+			src: "images/13.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/14.png"		
-		},
-		{
-			pageType: "command",
-			command: "<p><span class='keyword'>Weiss</span>: Check who that might be real quick! We may assume its Ren, but you can never be too safe.</p>"	
-		},	
-		{
-			pageType: "image",
-			src: "images/16.png"		
-		},
-		{
-			pageType: "image",
-			src: "images/17.png"		
-		},	
-		{
-			pageType: "image",
-			src: "images/18.png"		
-		},
-		{
-			pageType: "image",
-			src: "images/19.png"		
+			src: "images/14.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "command",
-			command: "<p><span class='keyword'>Everyone</span>: Quick inventory check.</p>"	
+			command: "<p><span class='keyword'>Weiss</span>: Check who that might be real quick! We may assume its Ren, but you can never be too safe.</p>",
+			animation: animations.fadeIn	
 		},	
 		{
 			pageType: "image",
-			src: "images/21.png"		
+			src: "images/16.png",
+			animation: animations.fadeIn		
+		},
+		{
+			pageType: "image",
+			src: "images/17.png",
+			animation: animations.fadeIn		
+		},	
+		{
+			pageType: "image",
+			src: "images/18.png",
+			animation: animations.fadeIn		
+		},
+		{
+			pageType: "image",
+			src: "images/19.png",
+			animation: animations.fadeIn		
+		},
+		{
+			pageType: "command",
+			command: "<p><span class='keyword'>Everyone</span>: Quick inventory check.</p>",
+			animation: animations.fadeIn	
+		},	
+		{
+			pageType: "image",
+			src: "images/21.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "instructions",
-			instructions: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>"			
+			instructions: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>",
+			animation: animations.fadeIn
 		},
 		{
 			pageType: "command",
-			command: "<p><span class='keyword'>Pyrrha</span> and <span class='keyword'>Velvet</span>: Pull a sick maneuver where <span class='keyword'>Pyrrha</span> tosses <span class='keyword'>Velvet</span> behind <span class='keyword'>Blitz Blockade</span> so <span class='keyword'>Velvet</span> can use...</p>"			
+			command: "<p><span class='keyword'>Pyrrha</span> and <span class='keyword'>Velvet</span>: Pull a sick maneuver where <span class='keyword'>Pyrrha</span> tosses <span class='keyword'>Velvet</span> behind <span class='keyword'>Blitz Blockade</span> so <span class='keyword'>Velvet</span> can use...</p>",
+			animation: animations.fadeIn
 		},	
 		{
 			pageType: "command",
-			command: "<p>...<span class='keyword'>Red Death Killer Heels</span> to slice up <span class='keyword'>Blitz Blockade</span>'s leg ligaments.</p>"
+			command: "<p>...<span class='keyword'>Red Death Killer Heels</span> to slice up <span class='keyword'>Blitz Blockade</span>'s leg ligaments.</p>",
+			animation: animations.fadeIn
 		},
 		{
 			pageType: "image",
-			src: "images/24.png"		
+			src: "images/24.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/25.png"		
+			src: "images/25.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/26.png"		
+			src: "images/26.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/27.png"		
+			src: "images/27.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/28.png"		
+			src: "images/28.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/29.png"		
+			src: "images/29.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/30.png"		
+			src: "images/30.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/31.png"		
+			src: "images/31.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/32.png"		
+			src: "images/32.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/33.png"		
+			src: "images/33.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/34.png"		
+			src: "images/34.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "command",
-			command: "<p><span class='keyword'>Yang</span> and <span class='keyword'>Cardin</span>: When it's distracted, knock it on its back with <span class='keyword'>Mace</span> and <span class='keyword'>Ember Celica</span> so the...</p>"		
+			command: "<p><span class='keyword'>Yang</span> and <span class='keyword'>Cardin</span>: When it's distracted, knock it on its back with <span class='keyword'>Mace</span> and <span class='keyword'>Ember Celica</span> so the...</p>",
+			animation: animations.fadeIn
 		},	
 		{
 			pageType: "command",
-			command: "<p>...blood jets are less of a threat and try to pin it down.</p>"		
+			command: "<p>...blood jets are less of a threat and try to pin it down.</p>",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/36.png"		
+			src: "images/36.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/37.png"		
+			src: "images/37.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/38.png"		
+			src: "images/38.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/39.png"		
+			src: "images/39.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/40.png"		
+			src: "images/40.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/41.png"		
+			src: "images/41.png",
+			animation: animations.fadeIn		
 		},	
 		{
 			pageType: "image",
-			src: "images/42.png"		
+			src: "images/42.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "command",
-			command: "<p><span class='keyword'>Blake</span>: Try to restrain the entity's arms. Maybe with <span class='keyword'>Gambol Shroud</span>.</p>"	
+			command: "<p><span class='keyword'>Blake</span>: Try to restrain the entity's arms. Maybe with <span class='keyword'>Gambol Shroud</span>.</p>"	,
+			animation: animations.fadeIn
 		},	
 		{
 			pageType: "image",
-			src: "images/44.png"		
+			src: "images/44.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "command",
-			command: "<p><span class='keyword'>Yang</span>: Slam that guy into the ground using <span class='keyword'>Ember Celiclaw</span>, making sure his blood spurters are facing the wall.</p>"	
+			command: "<p><span class='keyword'>Yang</span>: Slam that guy into the ground using <span class='keyword'>Ember Celiclaw</span>, making sure his blood spurters are facing the wall.</p>",
+			animation: animations.fadeIn	
 		},
 		{
 			pageType: "image",
-			src: "images/46.png"		
+			src: "images/46.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/47.png"		
+			src: "images/47.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/48.png"		
+			src: "images/48.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/49.png"		
+			src: "images/49.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/50.png"		
+			src: "images/50.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "image",
-			src: "images/51.png"		
+			src: "images/51.png",
+			animation: animations.fadeIn		
 		},
 		{
 			pageType: "instructions",
-			instructions: "<p><span class='keyword'>To be continued...</span></p>"			
-		}*/,
+			instructions: "<p><span class='keyword'>To be continued...</span></p>",
+			animation: animations.fadeIn			
+		},
 		{
 			pageType: "credits"
 		}
