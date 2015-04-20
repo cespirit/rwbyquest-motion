@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	var autoPlayOn = true;
-	var pageNum = -1;	
+	var pageNum = 51;	
 	var page;
 	var pageType;	
 	var pageElem = $("#page");
@@ -45,6 +45,11 @@ $(document).ready(function() {
 						pageElem.html("<div class='pageContent' data-pagenum='" + pageNum + "'><img class='panel-img' alt='' src='"+ page.src + "'/></div>");
 						runAnimation(page.animation);
 						break; 
+					case "message": 
+						console.log("Instructions page, pageNum: " + pageNum);
+						pageElem.html("<div class='message pageContent' data-pagenum='"+ pageNum +"'>" + page.message + "</div>");
+						runAnimation(page.animation);
+						break;
 					case "credits":
 						console.log("Credits page, pageNum: " + pageNum);
 						$("#page").html("");

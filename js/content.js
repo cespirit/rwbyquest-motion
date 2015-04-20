@@ -266,8 +266,8 @@ var content = {
 			animation: animations.fadeIn		
 		},
 		{
-			pageType: "instructions",
-			instructions: "<p><span class='keyword'>To be continued...</span></p>",
+			pageType: "message",
+			message: "<p><span class='keyword'>To be continued...</span></p>",
 			animation: animations.fadeIn			
 		},
 		{

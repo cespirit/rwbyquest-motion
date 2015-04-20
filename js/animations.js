@@ -20,8 +20,7 @@ var animations = {
 			return el.delay(3000);			
 		});
 
-		kickoff.resolve();   
-		
+		kickoff.resolve();   		
 		return third;
 	},
 	displayCredits: function(el) {

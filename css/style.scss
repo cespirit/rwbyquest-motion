@@ -65,7 +65,8 @@ a {
 
 .command, 
 .instructions,
-.credits {
+.credits,
+.message {
 	max-width: 500px;	
 	line-height: 1.5em;
 	font-size: 1.25em;	
@@ -74,7 +75,8 @@ a {
 
 .title-screen,
 .credits h2,
-.instructions h2 {
+.instructions h2,
+.message {
 	text-align: center;
 }
 
@@ -118,7 +120,8 @@ a {
 	}
 
 	.command, 
-	.instructions {
+	.instructions,
+	.message {
 		font-size: 1.075em;
 	}
 
