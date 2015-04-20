@@ -13,3 +13,4 @@ TO DO
 - Default options for animations
 - Animation check, if none, default animation.
 - Swap .js files in index for the app.min.js file
+- Create button at start for non autoplay with a return to menu screen button

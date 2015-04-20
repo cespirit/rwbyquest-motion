@@ -11,7 +11,7 @@ $(document).ready(function() {
 		$.when(animation(pageElem))
 		.then(function(){
 			if(autoPlayOn) { 
-				console.log("runAnimation - autoPlayOn for nextPage()");
+				console.log("runAnimation - autoPlayOn for nextPage()");				
 				nextPage(); 							
 			}
 		})
@@ -48,9 +48,7 @@ $(document).ready(function() {
 					case "credits":
 						console.log("Credits page, pageNum: " + pageNum);
 						$("#page").html("");
-						$("#togglePlay").find("i").removeClass("fa-pause");
-						$("#togglePlay").find("i").addClass("fa-play");						
-						$("#credits").css("display", "block");
+						runAnimation(page.animation);
 						break;
 					default:
 						console.log("Error in updatePage(). Page type is not valid for page: " + pageNum);
@@ -63,7 +61,7 @@ $(document).ready(function() {
 		}
 	};
 
-	var nextPage = function() {
+	var nextPage = function(animation) {
 		console.log("----- NEXT -----"); 
 		pageNum++;
 		if(pageNum > lastPage) {
@@ -77,6 +75,6 @@ $(document).ready(function() {
 		console.log("Clicked START");		
 		$("#titleScreen").css("display", "none");
 		pageElem.css("display", "block");  
-		nextPage();
+		nextPage();	
 	});
 });

@@ -271,7 +271,8 @@ var content = {
 			animation: animations.fadeIn			
 		},
 		{
-			pageType: "credits"
+			pageType: "credits",
+			animation: animations.displayCredits
 		}
 	]
 };
