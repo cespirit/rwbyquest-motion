@@ -24,6 +24,15 @@ a {
     min-width: 100vw;
     min-height: calc(100vh - 50px);
 }
+
+.credits {
+	display: none;
+}
+
+.instructions h2,
+.instructions p {
+	opacity: 0; 
+}
 				 
 .content {
     flex-grow: 0;
@@ -99,7 +108,6 @@ a {
 }
 
 .credits {
-	display: none; 	
 	overflow: auto;
 }
 

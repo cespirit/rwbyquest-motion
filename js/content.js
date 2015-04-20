@@ -3,7 +3,7 @@ var content = {
 		{
 			pageType: "instructions",
 			instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>",
-			animation: animations.fadeIn
+			animation: animations.instructions
 		},
 		{
 			pageType: "command",
@@ -108,7 +108,7 @@ var content = {
 		{
 			pageType: "instructions",
 			instructions: "<h2>COMMAND RUSH CONTINUES</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>",
-			animation: animations.fadeIn
+			animation: animations.instructions
 		},
 		{
 			pageType: "command",
