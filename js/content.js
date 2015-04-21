@@ -5,7 +5,7 @@ var content = {
 			instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>",
 			animation: animations.instructions,
 			options: {
-				delayTime: 3500
+				delayTime: 3000
 			}
 		},
 		{

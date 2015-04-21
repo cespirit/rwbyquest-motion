@@ -13,6 +13,7 @@ module.exports = function(grunt) {
 				src: [
 					'js/animations.js',
 					'js/content.js',
+					'js/preload.js',
 					'js/main.js'
 				],
 				dest: 'js/app.min.js'

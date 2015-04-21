@@ -9,6 +9,8 @@ Roosterteeth Site:
 http://roosterteeth.com/home.php
 
 TO DO
+- Pre-cache images
+- Host images on imgur
 - Different animations
 - Animation check, if none, default animation.
 - Swap .js files in index for the app.min.js file
