@@ -1,19 +1,14 @@
 $(document).ready(function() {
-	var autoPlayOn = true;
-	var pageNum = 51;	
-	var page;
-	var pageType;	
+	var pageNum = -1;	
+	var page, pageType;	
 	var pageElem = $("#page");
 	var lastPage = content.pages.length - 1;
-	var clickedControls = false;	
 
-	var runAnimation = function(animation){
-		$.when(animation(pageElem))
+	var runAnimation = function(page, newHTML){
+		$.when(page.animation(pageElem, newHTML, page.options))
 		.then(function(){
-			if(autoPlayOn) { 
-				console.log("runAnimation - autoPlayOn for nextPage()");				
-				nextPage(); 							
-			}
+			console.log("runAnimation() - nextPage()");				
+			nextPage(); 							
 		})
 		.fail(function(){
 			alert("An ERROR occurred. runAnimation() Failed");
@@ -23,6 +18,7 @@ $(document).ready(function() {
 	};
 
 	var updatePage = function() {		
+		var newHTML = "";
 		page = content.pages[pageNum];
 		if(page) {
 			pageType = page.pageType;
@@ -31,29 +27,28 @@ $(document).ready(function() {
 
 				switch(pageType) { 
 					case "instructions":
-						console.log("Instructions page, pageNum: " + pageNum);
-						pageElem.html("<div class='instructions pageContent' data-pagenum='"+ pageNum +"'>" + page.instructions + "</div>");
-						runAnimation(page.animation);
+						console.log("Update() - Instructions page, pageNum: " + pageNum);
+						newHTML = "<div class='instructions pageContent' data-pagenum='"+ pageNum +"'>" + page.instructions + "</div>";
+						runAnimation(page, newHTML);
 						break;
 					case "command":
-						console.log("Command page, pageNum: " + pageNum);
-						pageElem.html("<div class='command pageContent' data-pagenum='"+ pageNum +"'>" + page.command + "</div>");
-						runAnimation(page.animation);
+						console.log("Update() - Command page, pageNum: " + pageNum);
+						newHTML = "<div class='command pageContent' data-pagenum='"+ pageNum +"'>" + page.command + "</div>";
+						runAnimation(page, newHTML);
 						break;
 					case "image":
-						console.log("Image page, pageNum: " + pageNum);						
-						pageElem.html("<div class='pageContent' data-pagenum='" + pageNum + "'><img class='panel-img' alt='' src='"+ page.src + "'/></div>");
-						runAnimation(page.animation);
+						console.log("Update() - Image page, pageNum: " + pageNum);						
+						newHTML = "<div class='pageContent' data-pagenum='" + pageNum + "'><img class='panel-img' alt='' src='"+ page.src + "'/></div>";
+						runAnimation(page, newHTML);
 						break; 
 					case "message": 
-						console.log("Instructions page, pageNum: " + pageNum);
-						pageElem.html("<div class='message pageContent' data-pagenum='"+ pageNum +"'>" + page.message + "</div>");
-						runAnimation(page.animation);
+						console.log("Update() - Instructions page, pageNum: " + pageNum);
+						newHTML = "<div class='message pageContent' data-pagenum='"+ pageNum +"'>" + page.message + "</div>";
+						runAnimation(page, newHTML);
 						break;
 					case "credits":
-						console.log("Credits page, pageNum: " + pageNum);
-						$("#page").html("");
-						runAnimation(page.animation);
+						console.log("Update() - Credits page, pageNum: " + pageNum);
+						runAnimation(page, newHTML);
 						break;
 					default:
 						console.log("Error in updatePage(). Page type is not valid for page: " + pageNum);
@@ -70,6 +65,7 @@ $(document).ready(function() {
 		console.log("----- NEXT -----"); 
 		pageNum++;
 		if(pageNum > lastPage) {
+			console.log("No next page.");
 			--pageNum;	
 		} else {  
 			updatePage();

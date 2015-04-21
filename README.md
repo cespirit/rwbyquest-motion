@@ -10,7 +10,7 @@ http://roosterteeth.com/home.php
 
 TO DO
 - Different animations
-- Default options for animations
 - Animation check, if none, default animation.
 - Swap .js files in index for the app.min.js file
+- Image alt tags
 - Create button at start for non autoplay with a return to menu screen button

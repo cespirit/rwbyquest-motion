@@ -1,53 +1,76 @@
 var animations = {
-	fadeIn: function(el) {
+	fadeIn: function(pageElem, newHTML, pageOptions) {
 		console.log("fadeIn() function called");
-		
+
+		var defaultOptions = {
+			fadeInTime: 1000,
+			delayTime: 3000
+		};
+
+		var options = $.extend({}, pageOptions, defaultOptions);		
 		var kickoff, first, second, third;
 		kickoff = $.Deferred(); 
 
 		first = kickoff.then(function(){
-			return el.hide();
+			return pageElem.hide();
 		});
 
 		second = first.then(function(){
 			console.log("\tfadeIn: fadeIn()");
-			return el.fadeIn(1000);
+			pageElem.html(newHTML);
+			return pageElem.fadeIn(options.fadeInTime);
 			
 		});
 
 		third = second.then(function(){
 			console.log("\tfadeIn: delay()");
-			return el.delay(3000);			
+			return pageElem.delay(options.delayTime);			
 		});
 
 		kickoff.resolve();   		
 		return third;
 	},
-	displayCredits: function(el) {
+	displayCredits: function(pageElem, newHTML, pageOptions) {
+
+		var defaultOptions = {
+			fadeInTime: 1000
+		};
+
+		var options = $.extend({}, pageOptions, defaultOptions);	
 		var kickoff, first;
 		var credits = $("#credits");
-		el.html("");
-
+		
+		pageElem.html(newHTML);
 		kickoff = $.Deferred(); 
 
 		first = kickoff.then(function(){
 			console.log("\displayCredits: fadeIn()");
-			credits.fadeIn(1000);
+			credits.fadeIn(options.fadeInTime);
 		});
 
 		kickoff.resolve(); 
 		return first;
 	},
-	instructions: function(el) {
+	instructions: function(pageElem, newHTML, pageOptions) {
+
+		var defaultOptions = {
+			headerFadeInTime: 400,
+			contentFadeInTime: 800,
+			delayTime: 3000
+		};
+
+		var options = $.extend({}, pageOptions, defaultOptions);	
 		var kickoff, first, second, third;
+		
 		kickoff = $.Deferred(); 
+		pageElem.html(newHTML);
 
 		first = kickoff.then(function(){
 			console.log("\tinstructions: header fadeIn()");
 			var instructHeader = $(".instructions").find("h2");			
 			return instructHeader.animate({
 				opacity: 1
-			}, 500);
+			}, options.headerFadeInTime);
 		});
 
 		second = first.then(function(){
@@ -55,12 +78,12 @@ var animations = {
 			var instructContent = $(".instructions").find("p");	
 			return instructContent.animate({
 				opacity: 1
-			}, 1000);
+			}, options.contentFadeInTime);
 		}); 
 
 		third = second.then(function(){
 			console.log("\tinstructions: delay()");
-			return el.delay(3000);			
+			return pageElem.delay(options.delayTime);			
 		});
 		
 		kickoff.resolve();
