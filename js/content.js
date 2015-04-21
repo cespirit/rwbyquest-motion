@@ -4,13 +4,17 @@ var content = {
 			pageType: "instructions",
 			instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>",
 			animation: animations.instructions,
-			options: {}
+			options: {
+				delayTime: 3500
+			}
 		},
 		{
 			pageType: "command",
 			command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>",
 			animation: animations.fadeIn,
-			options: {} 
+			options: {
+				delayTime: 4500
+			} 
 		},
 		{
 			pageType: "image",
@@ -40,7 +44,9 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>",
 			animation: animations.fadeIn,
-			options: {}
+			options: {
+				delayTime: 5000
+			}
 		},	
 		{
 			pageType: "image",
@@ -88,7 +94,9 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Weiss</span>: Check who that might be real quick! We may assume its Ren, but you can never be too safe.</p>",
 			animation: animations.fadeIn,
-			options: {}	
+			options: {
+				delayTime: 5500
+			}	
 		},	
 		{
 			pageType: "image",
@@ -118,7 +126,9 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Everyone</span>: Quick inventory check.</p>",
 			animation: animations.fadeIn,
-			options: {}	
+			options: {
+				delayTime: 3000
+			}	
 		},	
 		{
 			pageType: "image",
@@ -130,19 +140,25 @@ var content = {
 			pageType: "instructions",
 			instructions: "<h2>COMMAND RUSH</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>",
 			animation: animations.instructions,
-			options: {}
+			options: {
+				delayTime: 5000
+			}
 		},
 		{
 			pageType: "command",
 			command: "<p><span class='keyword'>Pyrrha</span> and <span class='keyword'>Velvet</span>: Pull a sick maneuver where <span class='keyword'>Pyrrha</span> tosses <span class='keyword'>Velvet</span> behind <span class='keyword'>Blitz Blockade</span> so <span class='keyword'>Velvet</span> can use...</p>",
 			animation: animations.fadeIn,
-			options: {}
+			options: {
+				delayTime: 6000
+			}
 		},	
 		{
 			pageType: "command",
 			command: "<p>...<span class='keyword'>Red Death Killer Heels</span> to slice up <span class='keyword'>Blitz Blockade</span>'s leg ligaments.</p>",
 			animation: animations.fadeIn,
-			options: {}
+			options: {
+				delayTime: 5000
+			}
 		},
 		{
 			pageType: "image",
@@ -214,13 +230,17 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Yang</span> and <span class='keyword'>Cardin</span>: When it's distracted, knock it on its back with <span class='keyword'>Mace</span> and <span class='keyword'>Ember Celica</span> so the...</p>",
 			animation: animations.fadeIn,
-			options: {}
+			options: {
+				delayTime: 5500
+			}
 		},	
 		{
 			pageType: "command",
 			command: "<p>...blood jets are less of a threat and try to pin it down.</p>",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {
+				delayTime: 4000
+			}		
 		},
 		{
 			pageType: "image",
@@ -268,7 +288,9 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Blake</span>: Try to restrain the entity's arms. Maybe with <span class='keyword'>Gambol Shroud</span>.</p>"	,
 			animation: animations.fadeIn,
-			options: {}
+			options: {
+				delayTime: 5000
+			}
 		},	
 		{
 			pageType: "image",
@@ -280,7 +302,9 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Yang</span>: Slam that guy into the ground using <span class='keyword'>Ember Celiclaw</span>, making sure his blood spurters are facing the wall.</p>",
 			animation: animations.fadeIn,
-			options: {}	
+			options: {
+				delayTime: 6000
+			}	
 		},
 		{
 			pageType: "image",
@@ -303,7 +327,9 @@ var content = {
 			pageType: "command",
 			command: "<p><span class='keyword'>Ruby</span>: Read the <span class='keyword'>note</span> out loud. Scream it. We have to make it remember.</p>",
 			animation: animations.fadeIn,
-			options: {}
+			options: {
+				delayTime: 5000
+			}
 		},
 		{
 			pageType: "image",
@@ -351,7 +377,9 @@ var content = {
 			pageType: "message",
 			message: "<p><span class='keyword'>To be continued...</span></p>",
 			animation: animations.fadeIn,
-			options: {}			
+			options: {
+				delayTime: 3000
+			}			
 		},
 		{
 			pageType: "credits",

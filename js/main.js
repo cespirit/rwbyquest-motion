@@ -26,21 +26,21 @@ $(document).ready(function() {
 			if(pageType) {				
 
 				switch(pageType) { 
-					case "instructions":
-						console.log("Update() - Instructions page, pageNum: " + pageNum);
-						newHTML = "<div class='instructions pageContent' data-pagenum='"+ pageNum +"'>" + page.instructions + "</div>";
-						runAnimation(page, newHTML);
-						break;
-					case "command":
-						console.log("Update() - Command page, pageNum: " + pageNum);
-						newHTML = "<div class='command pageContent' data-pagenum='"+ pageNum +"'>" + page.command + "</div>";
-						runAnimation(page, newHTML);
-						break;
 					case "image":
 						console.log("Update() - Image page, pageNum: " + pageNum);						
 						newHTML = "<div class='pageContent' data-pagenum='" + pageNum + "'><img class='panel-img' alt='' src='"+ page.src + "'/></div>";
 						runAnimation(page, newHTML);
 						break; 
+					case "command":
+						console.log("Update() - Command page, pageNum: " + pageNum);
+						newHTML = "<div class='command pageContent' data-pagenum='"+ pageNum +"'>" + page.command + "</div>";
+						runAnimation(page, newHTML);
+						break;					
+					case "instructions":
+						console.log("Update() - Instructions page, pageNum: " + pageNum);
+						newHTML = "<div class='instructions pageContent' data-pagenum='"+ pageNum +"'>" + page.instructions + "</div>";
+						runAnimation(page, newHTML);
+						break;
 					case "message": 
 						console.log("Update() - Instructions page, pageNum: " + pageNum);
 						newHTML = "<div class='message pageContent' data-pagenum='"+ pageNum +"'>" + page.message + "</div>";
@@ -51,6 +51,7 @@ $(document).ready(function() {
 						runAnimation(page, newHTML);
 						break;
 					default:
+						alert("Something went wrong. Please contact charlenerespiritu@gmail.com and message them saying there was a problem on page: " + pageNum +".");
 						console.log("Error in updatePage(). Page type is not valid for page: " + pageNum);
 						break;
 				}

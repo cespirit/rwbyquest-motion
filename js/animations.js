@@ -3,11 +3,11 @@ var animations = {
 		console.log("fadeIn() function called");
 
 		var defaultOptions = {
-			fadeInTime: 1000,
-			delayTime: 3000
+			fadeInTime: 400,
+			delayTime: 4500
 		};
 
-		var options = $.extend({}, pageOptions, defaultOptions);		
+		var options = $.extend({}, defaultOptions, pageOptions);		
 		var kickoff, first, second, third;
 		kickoff = $.Deferred(); 
 
@@ -30,36 +30,15 @@ var animations = {
 		kickoff.resolve();   		
 		return third;
 	},
-	displayCredits: function(pageElem, newHTML, pageOptions) {
-
-		var defaultOptions = {
-			fadeInTime: 1000
-		};
-
-		var options = $.extend({}, pageOptions, defaultOptions);	
-		var kickoff, first;
-		var credits = $("#credits");
-		
-		pageElem.html(newHTML);
-		kickoff = $.Deferred(); 
-
-		first = kickoff.then(function(){
-			console.log("\displayCredits: fadeIn()");
-			credits.fadeIn(options.fadeInTime);
-		});
-
-		kickoff.resolve(); 
-		return first;
-	},
 	instructions: function(pageElem, newHTML, pageOptions) {
 
 		var defaultOptions = {
 			headerFadeInTime: 400,
 			contentFadeInTime: 800,
-			delayTime: 3000
+			delayTime: 4000
 		};
 
-		var options = $.extend({}, pageOptions, defaultOptions);	
+		var options = $.extend({}, defaultOptions, pageOptions);	
 		var kickoff, first, second, third;
 		
 		kickoff = $.Deferred(); 
@@ -88,6 +67,27 @@ var animations = {
 		
 		kickoff.resolve();
 		return third;
+	},
+	displayCredits: function(pageElem, newHTML, pageOptions) {
+
+		var defaultOptions = {
+			fadeInTime: 1000
+		};
+
+		var options = $.extend({}, defaultOptions, pageOptions);	
+		var kickoff, first;
+		var credits = $("#credits");
+		
+		pageElem.html(newHTML);
+		kickoff = $.Deferred(); 
+
+		first = kickoff.then(function(){
+			console.log("\displayCredits: fadeIn()");
+			credits.fadeIn(options.fadeInTime);
+		});
+
+		kickoff.resolve(); 
+		return first;
 	}
 
 };	
