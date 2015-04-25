@@ -9,12 +9,14 @@ Roosterteeth Site:
 http://roosterteeth.com/home.php
 
 TO DO
-- Change all animations functions to take in a page object instead of options
-- Create showLayers function
-- Preload layer images
+x Move images to imgur
+x Change all animations functions to take in a page object instead of options
+x Create showLayers function
+x Preload layer images
 - Once JS finish preloading images, show START button
 - Finish up content variable pages with imgur links
 - Adjust timing
 - Other animation functions
-- Animation check, if none, default animation or show an error.
+- Animation check, if none, default animation or show an error
+- Clean up and refactor
 - Swap .js files in index for the app.min.js file

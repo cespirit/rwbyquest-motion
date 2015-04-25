@@ -1,11 +1,11 @@
 $(document).ready(function() {
-	var pageNum = 1;	
+	var pageNum = -1;	
 	var page, pageType;	
 	var pageElem = $("#page");
 	var lastPage = content.pages.length - 1;
 
 	var runAnimation = function(page, newHTML){
-		$.when(page.animation(pageElem, newHTML, page.options))
+		$.when(page.animation(pageElem, newHTML, page))
 		.then(function(){
 			console.log("runAnimation() - nextPage()");				
 			nextPage(); 							

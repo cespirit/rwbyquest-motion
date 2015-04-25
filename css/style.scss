@@ -29,7 +29,14 @@ a {
 	position: relative;
 }
 
+/* MARKED FOR DELETION ---------------------------------*/
 .dialogue {
+	position: absolute; 
+	top: 0;
+	opacity: 0;
+}
+
+.layer {
 	position: absolute; 
 	top: 0;
 	opacity: 0;
