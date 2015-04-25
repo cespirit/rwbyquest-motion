@@ -3,6 +3,26 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		responsive_images: {
+			dev: {
+				options: {
+					engine: 'gm',
+					sizes: [{
+					width: '100%',     
+					/*suffix: ,*/   
+					quality: 40,     
+					rename: false
+					}]
+				},
+				files: [{
+					expand: true,
+					src: ['*.{gif,jpg,png}'],
+					cwd: 'images_src/',
+					dest: 'done/'
+				}]
+			}
+    	},
+
 		uglify: {
 			options: {
 				manage: false,  

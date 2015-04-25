@@ -25,6 +25,16 @@ a {
     min-height: calc(100vh - 50px);
 }
 
+.page {
+	position: relative;
+}
+
+.dialogue {
+	position: absolute; 
+	top: 0;
+	opacity: 0;
+}
+
 .credits {
 	display: none;
 }

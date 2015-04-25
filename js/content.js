@@ -1,3 +1,96 @@
+var content = {
+	pages: [		
+		{
+			pageType: "instructions",
+			instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>",
+			animation: animations.instructions,
+			options: {
+				delayTime: 3500
+			}
+		},
+		{
+			pageType: "command",
+			command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>",
+			animation: animations.fadeIn,
+			options: {
+				delayTime: 4500
+			} 
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/cFubDx4.png",
+			animation: animations.fadeIn,
+			options: {}			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/QzROdZa.png",
+			animation: animations.showLayers,
+			options: {
+				fadeInTime: 100,
+				//dialogueDelay: 500,
+				//dialogue: "http://i.imgur.com/1rh28Rf.png"
+				
+			},
+			layers: [
+				{
+					src: "http://i.imgur.com/1rh28Rf.png",
+					fadeInTime: 400,
+					delayTime: 3000
+				}
+			]
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/klwfgKT.png",
+			animation: animations.fadeIn,
+			options: {}
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/bPHibQa.png",
+			animation: animations.showLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/vRrKT4s.png",
+					fadeInTime: 400,
+					delayTime: 3000
+				}
+			]
+		},
+		{
+			pageType: "command",
+			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>",
+			animation: animations.fadeIn,
+			options: {
+				delayTime: 4500
+			}
+		},
+
+		/* Multi-layer test*/
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/XfX4Cw9.png",
+			animation: animations.showLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/FXXseAn.png",
+					fadeInTime: 400,
+					delayTime: 1000
+				},
+				{
+					src: "http://i.imgur.com/7AIASdw.png",
+					fadeInTime: 400,
+					delayTime: 3000	
+				}
+			]
+		}
+	]
+};
+
+/*
 var content = { 
 	pages: [	
 		{
@@ -5,7 +98,7 @@ var content = {
 			instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>",
 			animation: animations.instructions,
 			options: {
-				delayTime: 3000
+				delayTime: 3500
 			}
 		},
 		{
@@ -24,10 +117,20 @@ var content = {
 		},
 		{ 
 			pageType: "image",
-			src: "images/4.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "images/4a.png",
+			animation: animations.showDialogue,
+			options: {
+				fadeInTime: 100,
+				dialogueDelay: 500,
+				dialogue: "images/4b.png"
+			}		
 		},
+		//{ 
+		//	pageType: "image",
+		//	src: "images/4.png",
+		//	animation: animations.fadeIn,
+		//	options: {}		
+		//},
 		{
 			pageType: "image",
 			src: "images/5.png",
@@ -45,7 +148,7 @@ var content = {
 			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>",
 			animation: animations.fadeIn,
 			options: {
-				delayTime: 5000
+				delayTime: 4500
 			}
 		},	
 		{
@@ -388,3 +491,4 @@ var content = {
 		}
 	]
 };
+*/

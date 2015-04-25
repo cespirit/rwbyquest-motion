@@ -9,10 +9,12 @@ Roosterteeth Site:
 http://roosterteeth.com/home.php
 
 TO DO
-- Pre-cache images
-- Host images on imgur
-- Different animations
-- Animation check, if none, default animation.
+- Change all animations functions to take in a page object instead of options
+- Create showLayers function
+- Preload layer images
+- Once JS finish preloading images, show START button
+- Finish up content variable pages with imgur links
+- Adjust timing
+- Other animation functions
+- Animation check, if none, default animation or show an error.
 - Swap .js files in index for the app.min.js file
-- Image alt tags
-- Create button at start for non autoplay with a return to menu screen button
