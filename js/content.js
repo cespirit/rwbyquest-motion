@@ -13,9 +13,9 @@ var content = {
 			command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>",
 			animation: animations.fadeIn,
 			options: {
-				delayTime: 3000
+				delayTime: 4000
 			} 
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/cFubDx4.png",
@@ -27,7 +27,7 @@ var content = {
 			src: "http://i.imgur.com/QzROdZa.png",
 			animation: animations.fadeInLayers,
 			options: {
-				fadeInTime: 100				
+				delayTime: 3000				
 			},
 			layers: [
 				{
@@ -47,7 +47,9 @@ var content = {
 			pageType: "image",
 			src: "http://i.imgur.com/bPHibQa.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 4000
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/vRrKT4s.png",
@@ -55,7 +57,7 @@ var content = {
 					delayTime: 400
 				}
 			]
-		},
+		}, 
 		{
 			pageType: "command",
 			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>",
@@ -68,7 +70,9 @@ var content = {
 			pageType: "image",
 			src: "http://i.imgur.com/WBxIfVA.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 3000
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/cHaOATd.png",
@@ -82,31 +86,35 @@ var content = {
 			src: "http://i.imgur.com/ZeGEdFL.png",
 			animation: animations.fadeIn,
 			options: {}			
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/MsUxrOf.png",
 			animation: animations.fadeIn,
 			options: {}			
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/FgnAX49.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 3000
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/ib3O9aj.png",
 					fadeInTime: 200,
-					delayTime: 400
+					delayTime: 200
 				}
 			]				
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/OsRwoX4.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 3500
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/3KgGtqa.png",
@@ -114,30 +122,34 @@ var content = {
 					delayTime: 400
 				}
 			]				
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/XfX4Cw9.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 4500
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/FXXseAn.png",
 					fadeInTime: 200,
-					delayTime: 400
+					delayTime: 300
 				},
 				{
 					src: "http://i.imgur.com/7AIASdw.png",
 					fadeInTime: 200,
-					delayTime: 400
+					delayTime: 800
 				}
 			]				
 		},
 		{
 			pageType: "image",
-			src: "http://i.imgur.com/6W6gsq9.png",
+			src: "http://i.imgur.com/9G4c4rg.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 9000
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/dlnmdld.png",
@@ -147,17 +159,17 @@ var content = {
 				{
 					src: "http://i.imgur.com/QHLiIzM.png",
 					fadeInTime: 200,
-					delayTime: 400
+					delayTime: 1500
 				},
 				{
 					src: "http://i.imgur.com/oe3BRtx.png",
 					fadeInTime: 200,
-					delayTime: 400
+					delayTime: 1500
 				},
 				{
 					src: "http://i.imgur.com/Kcih616.png",
-					fadeInTime: 200,
-					delayTime: 400
+					fadeInTime: 100,
+					delayTime: 2750
 				}				
 			]				
 		},
@@ -168,7 +180,7 @@ var content = {
 			options: {
 				delayTime: 5500
 			}	
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/gHv3VrB.png",
@@ -179,25 +191,27 @@ var content = {
 			pageType: "image",
 			src: "http://i.imgur.com/y2qZaDx.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 3500
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/Ksj3onV.png",
 					fadeInTime: 200,
-					delayTime: 200
+					delayTime: 400
 				},
 				{
 					src: "http://i.imgur.com/cJal5e5.png",
 					fadeInTime: 200,
-					delayTime: 200
+					delayTime: 400
 				},
 				{
 					src: "http://i.imgur.com/imfuD72.png",
 					fadeInTime: 200,
-					delayTime: 200
+					delayTime: 400
 				}				
 			]				
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/8x43eHQ.png",
@@ -208,7 +222,9 @@ var content = {
 			pageType: "image",
 			src: "http://i.imgur.com/LUnKFxS.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 3500
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/NIBeLP0.png",
@@ -216,7 +232,7 @@ var content = {
 					delayTime: 400
 				}
 			]				
-		},
+		}, 
 		{
 			pageType: "command",
 			command: "<p><span class='keyword'>Everyone</span>: Quick inventory check.</p>",
@@ -229,7 +245,9 @@ var content = {
 			pageType: "image",
 			src: "http://i.imgur.com/ySpojAf.png",
 			animation: animations.fadeInLayers,
-			options: {},
+			options: {
+				delayTime: 4000
+			},
 			layers: [
 				{
 					src: "http://i.imgur.com/it1zG0K.png",
@@ -237,13 +255,15 @@ var content = {
 					delayTime: 400
 				}
 			]				
-		},
+		}, 
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/QJoxbM9.png",
 			animation: animations.fadeIn,
-			options: {}			
-		},
+			options: {
+				delayTime: 3500
+			}			
+		}, 
 		{
 			pageType: "instructions",
 			instructions: "<h2>COMMAND RUSH</h2><p>You may still directly command any party member. Please remember to specify who you are directing.</p>",
@@ -258,6 +278,14 @@ var content = {
 			animation: animations.fadeIn,
 			options: {
 				delayTime: 6000
+			}
+		},
+		{
+			pageType: "command",
+			command: "<p>...<span class='keyword'>Red Death Killer Heels</span> to slice up <span class='keyword'>Blitz Blockade</span>'s leg ligaments.</p>",
+			animation: animations.fadeIn,
+			options: {
+				delayTime: 5000
 			}
 		},
 		{
@@ -347,6 +375,14 @@ var content = {
 			options: {
 				delayTime: 5500
 			}
+		},
+		{
+			pageType: "command",
+			command: "<p>...blood jets are less of a threat and try to pin it down.</p>",
+			animation: animations.fadeIn,
+			options: {
+				delayTime: 4000
+			}		
 		},
 		{
 			pageType: "image",

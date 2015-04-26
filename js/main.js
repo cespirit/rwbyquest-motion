@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var pageNum = 52;	
+	var pageNum = -1;	
 	var page, pageType;	
 	var pageElem = $("#page");
 	var lastPage = content.pages.length - 1;

@@ -9,16 +9,17 @@ Roosterteeth Site:
 http://roosterteeth.com/home.php
 
 TO DO
-x Touch up images and get text dialogue with transparent background for layering
-x Move images to imgur
-x Change all animations functions to take in a page object instead of options
-x Create fadeInLayers function
-x Preload layer images
-x Once JS finish preloading images, show START button
-x Finish up content variable pages with imgur links
-- Add default options for fadeInLayersHelper
-- Other animation functions
-- Adjust timing
-- Animation check, if none, default animation or show an error
-- Clean up code, remove console.log stmts, and refactor
-- Swap .js files in index for the app.min.js file
+- [x] Touch up images and get text dialogue with transparent background for layering
+- [x] Move images to imgur
+- [x] Change all animations functions to take in a page object instead of options
+- [x] Create fadeInLayers function
+- [x] Preload layer images
+- [x] Once JS finish preloading images, show START button
+- [x] Finish up content variable pages with imgur links
+- [x] Fix white spot on right and reupload to imgur: http://i.imgur.com/6W6gsq9.png
+- [ ] Timing for fade in layered animations
+- [ ]Timing for commands and instructions
+- [ ]Other animation functions
+- [ ]Animation check, if none, default animation or show an error
+- [ ]Clean up code, remove console.log stmts, and refactor
+- [ ]Swap .js files in index for the app.min.js file
