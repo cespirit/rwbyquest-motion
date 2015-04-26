@@ -1,8 +1,12 @@
 $(document).ready(function() {
-	var pageNum = -1;	
+	var pageNum = 52;	
 	var page, pageType;	
 	var pageElem = $("#page");
 	var lastPage = content.pages.length - 1;
+
+	$("#btnStart").animate({
+		opacity: 1,
+	}, 1000);
 
 	var runAnimation = function(page, newHTML){
 		$.when(page.animation(pageElem, newHTML, page))

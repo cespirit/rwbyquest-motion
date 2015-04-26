@@ -27,16 +27,13 @@ var content = {
 			src: "http://i.imgur.com/QzROdZa.png",
 			animation: animations.fadeInLayers,
 			options: {
-				fadeInTime: 100,
-				//dialogueDelay: 500,
-				//dialogue: "http://i.imgur.com/1rh28Rf.png"
-				
+				fadeInTime: 100				
 			},
 			layers: [
 				{
 					src: "http://i.imgur.com/1rh28Rf.png",
 					fadeInTime: 200,
-					delayTime: 1000
+					delayTime: 400
 				}
 			]
 		},
@@ -55,7 +52,7 @@ var content = {
 				{
 					src: "http://i.imgur.com/vRrKT4s.png",
 					fadeInTime: 200,
-					delayTime: 1000
+					delayTime: 400
 				}
 			]
 		},
@@ -67,8 +64,57 @@ var content = {
 				delayTime: 3000
 			}
 		},
-
-		/* Multi-layer test*/
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/WBxIfVA.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/cHaOATd.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/ZeGEdFL.png",
+			animation: animations.fadeIn,
+			options: {}			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/MsUxrOf.png",
+			animation: animations.fadeIn,
+			options: {}			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/FgnAX49.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/ib3O9aj.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/OsRwoX4.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/3KgGtqa.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
 		{
 			pageType: "image",
 			src: "http://i.imgur.com/XfX4Cw9.png",
@@ -78,120 +124,42 @@ var content = {
 				{
 					src: "http://i.imgur.com/FXXseAn.png",
 					fadeInTime: 200,
-					delayTime: 1000
+					delayTime: 400
 				},
 				{
 					src: "http://i.imgur.com/7AIASdw.png",
 					fadeInTime: 200,
-					delayTime: 1000	
+					delayTime: 400
 				}
-			]
-		}
-	]
-};
-
-/*
-var content = { 
-	pages: [	
-		{
-			pageType: "instructions",
-			instructions: "<h2>COMMAND RUSH</h2><p>For the duration of this encounter you may directly command <span class='keyword'>any</span> party member.</p>",
-			animation: animations.instructions,
-			options: {
-				delayTime: 3500
-			}
-		},
-		{
-			pageType: "command",
-			command: "<p><span class='keyword'>Everyone</span>: Put as much distance between you and the window. Maybe head for the hall if possible.</p>",
-			animation: animations.fadeIn,
-			options: {
-				delayTime: 4500
-			} 
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/3.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{ 
-			pageType: "image",
-			src: "images/4a.png",
-			animation: animations.showDialogue,
-			options: {
-				fadeInTime: 100,
-				dialogueDelay: 500,
-				dialogue: "images/4b.png"
-			}		
-		},
-		//{ 
-		//	pageType: "image",
-		//	src: "images/4.png",
-		//	animation: animations.fadeIn,
-		//	options: {}		
-		//},
-		{
-			pageType: "image",
-			src: "images/5.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/6.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{
-			pageType: "command",
-			command: "<p><span class='keyword'>Everyone</span>: Back away from the window. Test out the entity's abilities by throwing a pillow at them!</p>",
-			animation: animations.fadeIn,
-			options: {
-				delayTime: 4500
-			}
-		},	
-		{
-			pageType: "image",
-			src: "images/8.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{
-			pageType: "image",
-			src: "images/9.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/10.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{
-			pageType: "image",
-			src: "images/11.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/12.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{
-			pageType: "image",
-			src: "images/13.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/14.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/6W6gsq9.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/dlnmdld.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/QHLiIzM.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/oe3BRtx.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/Kcih616.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}				
+			]				
 		},
 		{
 			pageType: "command",
@@ -200,30 +168,54 @@ var content = {
 			options: {
 				delayTime: 5500
 			}	
-		},	
-		{
-			pageType: "image",
-			src: "images/16.png",
-			animation: animations.fadeIn,
-			options: {}		
 		},
 		{
 			pageType: "image",
-			src: "images/17.png",
+			src: "http://i.imgur.com/gHv3VrB.png",
 			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/18.png",
-			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/19.png",
+			src: "http://i.imgur.com/y2qZaDx.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/Ksj3onV.png",
+					fadeInTime: 200,
+					delayTime: 200
+				},
+				{
+					src: "http://i.imgur.com/cJal5e5.png",
+					fadeInTime: 200,
+					delayTime: 200
+				},
+				{
+					src: "http://i.imgur.com/imfuD72.png",
+					fadeInTime: 200,
+					delayTime: 200
+				}				
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/8x43eHQ.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/LUnKFxS.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/NIBeLP0.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "command",
@@ -232,12 +224,25 @@ var content = {
 			options: {
 				delayTime: 3000
 			}	
-		},	
+		},
 		{
 			pageType: "image",
-			src: "images/21.png",
+			src: "http://i.imgur.com/ySpojAf.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/it1zG0K.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/QJoxbM9.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "instructions",
@@ -254,80 +259,86 @@ var content = {
 			options: {
 				delayTime: 6000
 			}
-		},	
-		{
-			pageType: "command",
-			command: "<p>...<span class='keyword'>Red Death Killer Heels</span> to slice up <span class='keyword'>Blitz Blockade</span>'s leg ligaments.</p>",
-			animation: animations.fadeIn,
-			options: {
-				delayTime: 5000
-			}
 		},
 		{
 			pageType: "image",
-			src: "images/24.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/SX9wiWv.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/QsbtRh9.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/25.png",
+			src: "http://i.imgur.com/7Jg7yvS.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/26.png",
+			src: "http://i.imgur.com/anA3nCH.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/27.png",
+			src: "http://i.imgur.com/VJCEEwf.png",
 			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/28.png",
-			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/29.png",
+			src: "http://i.imgur.com/l1ma4Nn.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/30.png",
+			src: "http://i.imgur.com/yzzUp4g.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/31.png",
+			src: "http://i.imgur.com/cpjhyEv.png",
 			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/32.png",
-			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/33.png",
+			src: "http://i.imgur.com/FGQS1cC.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/34.png",
+			src: "http://i.imgur.com/B4phg7d.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/oX3AcjU.png",
+			animation: animations.fadeIn,
+			options: {}			
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/0YphWuX.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/6La6HyI.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "command",
@@ -336,56 +347,98 @@ var content = {
 			options: {
 				delayTime: 5500
 			}
-		},	
-		{
-			pageType: "command",
-			command: "<p>...blood jets are less of a threat and try to pin it down.</p>",
-			animation: animations.fadeIn,
-			options: {
-				delayTime: 4000
-			}		
 		},
 		{
 			pageType: "image",
-			src: "images/36.png",
+			src: "http://i.imgur.com/L4tJFYz.png",
 			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/37.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/38.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/Y4yBcJB.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/PAAlQz4.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/inFFNR1.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/39.png",
+			src: "http://i.imgur.com/L3wvkJ0.png",
 			animation: animations.fadeIn,
-			options: {}		
-		},	
-		{
-			pageType: "image",
-			src: "images/40.png",
-			animation: animations.fadeIn,
-			options: {}		
+			options: {}			
 		},
 		{
 			pageType: "image",
-			src: "images/41.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},	
+			src: "http://i.imgur.com/JjuJ6Jx.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/2YQc0px.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/OftRE0m.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
 		{
 			pageType: "image",
-			src: "images/42.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/mK9sJsK.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/n7dYA3Y.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/Nn8MoWP.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/57A0j4Z.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/DWxgKpM.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/FuCpDyG.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/VmrromU.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "command",
@@ -394,37 +447,51 @@ var content = {
 			options: {
 				delayTime: 5000
 			}
-		},	
-		{
-			pageType: "image",
-			src: "images/44.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{
-			pageType: "command",
-			command: "<p><span class='keyword'>Yang</span>: Slam that guy into the ground using <span class='keyword'>Ember Celiclaw</span>, making sure his blood spurters are facing the wall.</p>",
-			animation: animations.fadeIn,
-			options: {
-				delayTime: 6000
-			}	
 		},
 		{
 			pageType: "image",
-			src: "images/46.png",
-			animation: animations.fadeIn,
-			options: {}		
-		},
-		{	pageType: "image",
-			src: "images/47.png",
-			animation: animations.fadeIn,
-			options: {}
+			src: "http://i.imgur.com/Yp5lgoD.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/c5VDcxI.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/48.png",
+			src: "http://i.imgur.com/0jwTxGq.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/tTdGDFo.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/pMJPqRp.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/qbe4oSC.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
+		},
+		{
+			pageType: "image",
+			src: "http://i.imgur.com/QzPnV2K.png",
 			animation: animations.fadeIn,
-			options: {}
+			options: {}			
 		},
 		{
 			pageType: "command",
@@ -436,45 +503,124 @@ var content = {
 		},
 		{
 			pageType: "image",
-			src: "images/49.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/z0RlsLZ.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/aMWnULA.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/50.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/62iDPK2.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/2L6zmzc.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/AKmYbKJ.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/1ehgp4a.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/51.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/Gil9LHT.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/l3sva4K.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/DNZdMfV.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/52.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/N0Stv8b.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/FbPsTil.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/U0kehxR.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/53.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/hCG82WY.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/ezJMZq7.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/0icuY3n.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/54.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/ickdtAI.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/Yml9V8m.png",
+					fadeInTime: 200,
+					delayTime: 400
+				},
+				{
+					src: "http://i.imgur.com/snyiQLU.png",
+					fadeInTime: 2000,
+					delayTime: 1000
+				}
+			]				
 		},
 		{
 			pageType: "image",
-			src: "images/55.png",
-			animation: animations.fadeIn,
-			options: {}		
+			src: "http://i.imgur.com/TpYij7j.png",
+			animation: animations.fadeInLayers,
+			options: {},
+			layers: [
+				{
+					src: "http://i.imgur.com/zkb4KME.png",
+					fadeInTime: 200,
+					delayTime: 400
+				}
+			]			
 		},
 		{
 			pageType: "message",
@@ -491,4 +637,3 @@ var content = {
 		}
 	]
 };
-*/

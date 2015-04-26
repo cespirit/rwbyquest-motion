@@ -66,18 +66,21 @@ a {
 	color: white;	
 	text-transform: uppercase;
 	font-weight: bold;
-	border: 1px solid lighten($controls-color, 15%);
-	background: lighten($controls-color, 15%);
+	border: 1px solid white;
+	background: #000000;
 	border-radius: 5px;	
+	transition: background 0.25s, border-color 0.25s;
 
-	&:hover, &:focus, &:active {
-		background: #000000;
-		border: 1px solid white;
+	&:hover, &:focus, &:active {		
+		border: 1px solid lighten($controls-color, 15%);
+		background: lighten($controls-color, 15%);		
 	}
 }
 
 .btn-start {
 	padding: 0.5em 2em;
+	opacity: 0;
+	background: #000000;
 }
 
 .command, 

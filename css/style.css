@@ -233,15 +233,18 @@ a {
   color: white;
   text-transform: uppercase;
   font-weight: bold;
-  border: 1px solid #0909af;
-  background: #0909af;
-  border-radius: 5px; }
+  border: 1px solid white;
+  background: #000000;
+  border-radius: 5px;
+  transition: background 0.25s, border-color 0.25s; }
   .btn:hover, .btn:focus, .btn:active {
-    background: #000000;
-    border: 1px solid white; }
+    border: 1px solid #0909af;
+    background: #0909af; }
 
 .btn-start {
-  padding: 0.5em 2em; }
+  padding: 0.5em 2em;
+  opacity: 0;
+  background: #000000; }
 
 .command,
 .instructions,

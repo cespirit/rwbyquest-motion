@@ -1,26 +1,20 @@
 var animations = {
-	fadeInLayersHelper: function(layers) {
-		
+	fadeInLayersHelper: function(pageElem, layers) {		
 		if (layers.length > 0) {
-	        // Get first layer
-	        var layer = layers[0];
-	        var layerHTML = "<img class='panel-img dialogue' alt='' src='" + layer.src + "'/>";
+	        layer = layers[0];
+	        layerHTML = "<img class='panel-img dialogue' alt='' src='" + layer.src + "'/>";
 
-	        // Create element
-	        // Append element to page (make sure add starts as opacity 0 or something - look at scss .dialogue)
-	        // Maybe be remove dialogueDelay and put the layer's delay before animate to opacity 1
-	        // animate's callback will be fadeInLayersHelper(layers.slice(1));
-
-	        $(layerHTML).appendTo($("#page"))
+	        $(layerHTML).appendTo(pageElem)
 	        .delay(layer.delayTime)
 	        .animate({
 				opacity: 1
-			}, layer.fadeInTime, function(){
-	        	animations.fadeInLayersHelper(layers.slice(1));
+			}, layer.fadeInTime, function() {
+	        	animations.fadeInLayersHelper(pageElem, layers.slice(1));
 	        });
-    	}
+    	}    	
 	},
 	fadeInLayers: function(pageElem, newHTML, page) {
+
 		var defaultOptions = {
 			fadeInTime: 400,						
 			delayLayerTime: 400,
@@ -40,13 +34,11 @@ var animations = {
 		second = first.then(function(){
 			console.log("\tfadeIn: fadeIn()");
 			pageElem.html(newHTML);
-			return pageElem.fadeIn(options.fadeInTime);	//.delay(options.delayLayerTime);			
+			return pageElem.fadeIn(options.fadeInTime);			
 		});
 
-		third = second.then(function(){
-			// LOOP THROUGH LAYERS AND DO SHIT
-			// use slice on the array
-			animations.fadeInLayersHelper(page.layers);
+		third = second.then(function() {
+			animations.fadeInLayersHelper(pageElem, page.layers);
 		});
 
 		fourth = third.then(function(){
@@ -57,8 +49,8 @@ var animations = {
 		kickoff.resolve();   		
 		return fourth;
 
-
 	},
+	/* MARKED FOR DELETION -------------------------------------------------------------*/
 	showDialogue: function(pageElem, newHTML, page) {
 		console.log("showtext() function called");
 
